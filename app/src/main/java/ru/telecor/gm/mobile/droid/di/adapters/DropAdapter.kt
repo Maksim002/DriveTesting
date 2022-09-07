@@ -28,11 +28,11 @@ class DropAdapter(var listener: DropHolder.Listener, var item: ArrayList<LoaderI
     fun filter(sequence: CharSequence? = null, list: ArrayList<LoaderInfo>? = null): ArrayList<LoaderInfo> {
         val temp = ArrayList<LoaderInfo>()
         for (s in list!!) {
-            if ((s.firstName + s.lastName).toLowerCase().contains(sequence!!)) {
+            if ((s.firstName + s.lastName).toLowerCase().contains(sequence.toString().toLowerCase())) {
                 temp.add(s)
             }
 
-            if (s.employeeId.toLowerCase().contains(sequence)) {
+            if (s.employeeId.toLowerCase().contains(sequence.toString().toLowerCase())) {
                 temp.add(s)
             }
         }
